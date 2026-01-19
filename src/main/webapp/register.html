@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registration Form</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+    }
+
+    .form-box {
+        width: 400px;
+        border: 2px solid black;
+        padding: 25px;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        margin: 8px 0;
+    }
+
+    .row label {
+        width: 120px;
+    }
+
+    .row input,
+    .row select {
+        width: 200px;
+        padding: 6px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 15px;
+        cursor: pointer;
+        background-color: green;
+        color: white;
+        border: none;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="form-box">
+<h2 style="text-align:center;">Registration Form</h2>
+
+<form action="SaveServlet" method="post">
+
+    <div class="row">
+        <label>UserId:</label>
+        <input type="number" name="id">
+    </div>
+
+    <div class="row">
+        <label>Name:</label>
+        <input type="text" name="name">
+    </div>
+
+    <div class="row">
+        <label>Email:</label>
+        <input type="email" name="email">
+    </div>
+
+    <div class="row">
+        <label>Password:</label>
+        <input type="password" name="password">
+    </div>
+
+    <div class="row">
+        <label>Age:</label>
+        <input type="number" name="age">
+    </div>
+
+    <div class="row">
+        <label>City:</label>
+        <select name="city">
+            <option>Pune</option>
+            <option>Mumbai</option>
+            <option>Ahilyanagar</option>
+            <option>Delhi</option>
+            <option>Others</option>
+        </select>
+    </div>
+
+    <input type="submit" value="Register">
+
+</form>
+
+<div style="text-align:center; margin-top:10px;">
+    <a href="ViewServlet">View Users</a><br>
+    Already registered?
+    <a href="login.html">Login here</a>
+</div>
+
+</div>
+
+</body>
+</html>
